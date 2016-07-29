@@ -31,7 +31,7 @@ export default {
     loaders: [
       {
         test: /\.jsx?$/,
-        loaders: ['babel'],
+        loader: 'babel-loader',
         exclude: /node_modules/
       },
       {

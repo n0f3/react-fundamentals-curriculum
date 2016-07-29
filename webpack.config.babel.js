@@ -41,6 +41,10 @@ export default {
       {
         test: /\.scss$/,
         loaders: ['style', 'css', 'sass']
+      },
+      {
+        test: /\.svg$/,
+        loaders: ['file']
       }
     ]
   },

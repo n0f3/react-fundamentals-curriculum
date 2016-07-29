@@ -1,13 +1,12 @@
 import React, {PropTypes} from 'react';
 import NavBar from './NavBar';
+import '../styles/main.scss';
 
 const Main = (props) => {
   return (
-    <div>
+    <div className='main-container'>
       <NavBar title='Weather App sample'/>
-      <div className='container'>
-        {props.children}
-      </div>
+      {props.children}
     </div>
   )
 }

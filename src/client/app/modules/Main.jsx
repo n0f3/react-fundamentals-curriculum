@@ -3,9 +3,12 @@ import NavBar from './NavBar';
 
 const Main = (props) => {
   return (
-    <NavBar title='Weather App sample'>
-      {props.children}
-    </NavBar>
+    <div>
+      <NavBar title='Weather App sample'/>
+      <div className='container'>
+        {props.children}
+      </div>
+    </div>
   )
 }
 

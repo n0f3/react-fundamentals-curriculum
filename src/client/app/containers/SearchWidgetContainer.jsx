@@ -29,7 +29,7 @@ export default class SearchWidgetContainer extends React.Component {
 
   handleCitySubmit(e) {
     e.preventDefault();
-    const toSend = this.state.city;
+    const toSend = this.state.city || this.state.defaultCity;
     this.resetState();
     this.context.router.push(`/getWeather/${toSend}`);
   }
@@ -41,6 +41,8 @@ export default class SearchWidgetContainer extends React.Component {
         city={this.state.city}
         handleChange={this.handleChange}
         handleCitySubmit={this.handleCitySubmit}
+        navbarBtnOverride={this.props.navbarBtnOverride}
+        navbarTxtOverride={this.props.navbarTxtOverride}
       />
       )
   }

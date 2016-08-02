@@ -1,6 +1,5 @@
 import React, {PropTypes} from 'react';
 import {SearchWidget} from '../modules/SearchWidget';
-import WeatherApiHelper from '../helpers/WeatherApiHelper';
 
 export default class SearchWidgetContainer extends React.Component {
   static contextTypes = {

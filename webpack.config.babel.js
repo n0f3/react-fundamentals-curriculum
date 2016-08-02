@@ -22,7 +22,9 @@ export default {
   entry: `${APP_DIR}/app.js`,
   output: {
     path: BUILD_DIR,
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    hotUpdateChunkFilename: "[id].hot-update.js",
+    hotUpdateMainFilename: "hot-update.json"
   },
   resolve: {
     extensions: ['', '.js', '.jsx']
@@ -45,6 +47,10 @@ export default {
       {
         test: /\.svg$/,
         loaders: ['file']
+      },
+      {
+        test: /\.json$/,
+        loaders: ['json']
       }
     ]
   },

@@ -21,8 +21,8 @@ const getWeatherData = (input) => {
       returnObj.weatherData = data.list.map((element) => {
         return {
           date: moment.unix(element.dt),
-          weatherDescription: element.weather.description,
-          weatherId: element.weather.id,
+          weatherDescription: element.weather[0].description,
+          weatherId: element.weather[0].id,
           minTemp: element.temp.min,
           maxTemp: element.temp.max,
           humidity: element.humidity

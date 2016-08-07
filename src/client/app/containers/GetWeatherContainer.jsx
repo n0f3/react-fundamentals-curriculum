@@ -35,10 +35,9 @@ export default class GetWeatherContainer extends React.Component {
         <ul>
           {
             this.state.weatherData.map((element) => {
-              console.log(element);
               return (
                 <Link key={element.date.unix()} to='/detail' state={element}>
-                  <DayElement  formattedDate={element.date.format('ddd, MMMM Do')}/>
+                  <li><DayElement date={element.date}/></li>
                 </Link>
               )
             })

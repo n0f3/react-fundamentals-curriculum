@@ -1,14 +1,16 @@
 import React, {PropTypes} from 'react';
+import moment from 'moment';
 
 const DayElement = props => {
+  console.log(props.date);
   return (
       //Add image of weather here
-        <li>{props.formattedDate}</li>
+        <h1>{props.date.format('ddd, MMMM Do')}</h1>
   );
 };
 
 DayElement.propTypes = {
-  formattedDate: PropTypes.string.isRequired
+  date: PropTypes.object.isRequired
 };
 
 export default DayElement;

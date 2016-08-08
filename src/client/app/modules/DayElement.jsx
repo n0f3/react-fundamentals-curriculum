@@ -5,7 +5,7 @@ const DayElement = props => {
   console.log(props.date);
   return (
       //Add image of weather here
-        <h1>{props.date.format('ddd, MMMM Do')}</h1>
+        <p>{props.date.format('ddd, MMMM Do')}</p>
   );
 };
 
